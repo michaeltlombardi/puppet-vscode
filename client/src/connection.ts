@@ -4,7 +4,7 @@ import vscode = require('vscode');
 import cp = require('child_process');
 import { Logger } from '../src/logging';
 import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient';
-import { setupPuppetCommands } from '../src/puppetcommands';
+import { setupPuppetCommands, setupPDKCommands } from '../src/puppetcommands';
 import * as messages from '../src/messages';
 import fs = require('fs');
 
@@ -47,6 +47,7 @@ export class ConnectionManager implements IConnectionManager {
   private extensionContext = undefined;
   private commandsRegistered = false;
   private logger: Logger = undefined;
+  private terminal: vscode.Terminal = undefined
 
   public get status() : ConnectionStatus {
     return this.connectionStatus;
@@ -65,11 +66,13 @@ export class ConnectionManager implements IConnectionManager {
     this.connectionConfiguration = connectionConfig;
     this.connectionConfiguration.type = ConnectionType.Unknown;
     var contextPath = this.extensionContext.asAbsolutePath(path.join('vendor', 'languageserver', 'puppet-languageserver'));
+    this.terminal = vscode.window.createTerminal('Puppet PDK');
 
     if (!this.commandsRegistered) {
       this.logger.debug('Configuring commands');
 
       setupPuppetCommands(langID, this, this.extensionContext, this.logger);
+      setupPDKCommands(langID, this, this.extensionContext, this.logger, this.terminal);
       this.commandsRegistered = true;
     }
 
