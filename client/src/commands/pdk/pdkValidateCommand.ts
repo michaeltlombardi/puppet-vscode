@@ -11,12 +11,12 @@ export class pdkValidateCommand {
   private logger: Logger = undefined;
   private terminal: vscode.Terminal = undefined;
 
-  constructor(logger: Logger) {
+  constructor(logger: Logger, terminal: vscode.Terminal) {
     this.logger = logger;
+    this.terminal = terminal;
   }
 
   public run() {
-    this.terminal = vscode.window.createTerminal('pdk');
     this.terminal.sendText(`pdk validate`);
     this.terminal.show();
     if (reporter) {

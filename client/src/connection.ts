@@ -67,6 +67,7 @@ export class ConnectionManager implements IConnectionManager {
     this.connectionConfiguration.type = ConnectionType.Unknown;
     var contextPath = this.extensionContext.asAbsolutePath(path.join('vendor', 'languageserver', 'puppet-languageserver'));
     this.terminal = vscode.window.createTerminal('Puppet PDK');
+    this.terminal.show();
 
     if (!this.commandsRegistered) {
       this.logger.debug('Configuring commands');

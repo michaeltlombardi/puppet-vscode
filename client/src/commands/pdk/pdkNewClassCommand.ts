@@ -11,8 +11,9 @@ export class pdkNewClassCommand {
   private logger: Logger = undefined;
   private terminal: vscode.Terminal = undefined;
 
-  constructor(logger: Logger) {
+  constructor(logger: Logger, terminal: vscode.Terminal) {
     this.logger = logger;
+    this.terminal = terminal;
   }
 
   public run() {
@@ -22,7 +23,6 @@ export class pdkNewClassCommand {
       matchOnDetail: true
     };
     vscode.window.showInputBox(nameOpts).then(moduleName => {
-      this.terminal = vscode.window.createTerminal('pdk');
       this.terminal.sendText(`pdk new class ${moduleName}`);
       this.terminal.show();
       if (reporter) {

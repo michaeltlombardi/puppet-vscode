@@ -35,8 +35,9 @@ export class pdkNewModuleCommand {
   private logger: Logger = undefined;
   private terminal: vscode.Terminal = undefined;
 
-  constructor(logger: Logger) {
+  constructor(logger: Logger, terminal: vscode.Terminal) {
     this.logger = logger;
+    this.terminal = terminal;
   }
 
   public run() {
@@ -53,7 +54,6 @@ export class pdkNewModuleCommand {
 
     vscode.window.showInputBox(nameOpts).then(moduleName => {
       vscode.window.showInputBox(dirOpts).then(dir => {
-        this.terminal = vscode.window.createTerminal('pdk');
         this.terminal.sendText(`pdk new module --skip-interview ${moduleName} ${dir} && code ${dir} `);
         this.terminal.show();
         if (reporter) {
