@@ -12,6 +12,12 @@
     
         
     <url>
+     <loc>/about/Change_Log/</loc>
+     <lastmod>2017-11-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/about/Code_of_Conduct/</loc>
      <lastmod>2017-11-09</lastmod>
      <changefreq>daily</changefreq>

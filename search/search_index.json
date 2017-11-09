@@ -26,6 +26,116 @@
             "title": "Feedback &amp; Help"
         },
         {
+            "location": "/about/Change_Log/",
+            "text": "All notable changes to the \"vscode-puppet\" extension will be documented in this file.\n\n\nCheck \nKeep a Changelog\n for recommendations on how to structure this file.\n\n\nUnreleased\n\n\n0.7.2 - 2017-11-01\n\n\n\n\n(GH-165) Broken readme link\n\n\n(GH-88)  Rework Node Graph Preview to use local svg\n\n\n(GH-154) Use hosted JSON schema files\n\n\n(GH-169) Fix bug in sytanx highlighting\n\n\n(GH-167) Add PDK New Task command\n\n\n(GH-156) Document restarting Puppet extension command\n\n\n(GH-177) Remove detection of Puppet VERSION file\n\n\n(GH-175) Fix 'could not find valid version of Puppet'\n\n\n\n\n0.7.1 - 2017-09-29\n\n\n\n\n(GH-157) Puppet Resource command hidden\n\n\n\n\n0.7.0 - 2017-09-22\n\n\n\n\n(GH-115) Add Puppet Development Kit (PDK) integration\n\n\n(GH-136) Create a better UI experience while Puppet loads\n\n\n(GH-61)  Create a better experience when language client fails\n\n\n(GH-135) Fix incorrect logger when a client error occurs\n\n\n(GH-129) Honor inline puppet lint directives\n\n\n(GH-133) Fix issue with puppet 5.1.0\n\n\n(GH-122) Show upgrade message with changelog\n\n\n(GH-120) Allow custom Puppet agent installation directory\n\n\n(GH-126) Fix completion provider with Puppet 5.2.0\n\n\n(GH-110) Add extension analytics\n\n\n(GH-138) Set extension analytics to prod\n\n\n(GH-109) Randomize languageserver port\n\n\n(GH-111) Parse puppet-lint.rc in module directory\n\n\n\n\n0.6.0 - 2017-08-08\n\n\n\n\nFix packaging error where language server was not included\n\n\n\n\n0.5.3 - 2017-08-08\n\n\n\n\n(GH-92) Added context menus for Puppet Resource and Nodegraph preview\n\n\n(GH-98) Improve language server function and type loading\n\n\n(GH-52) JSON validation and schema for metadata.json\n\n\n(GH-47) Fixes pending language server tests\n\n\n(GH-45) Fix runocop violations for language tcp server\n\n\n(GH-89) Document support for linux in readme\n\n\n(GH-64) Additional language server tests\n\n\n(GH-103) Extension now supports puppet-lint rc files\n\n\n(GH-99) Improved client README and Gallery page\n\n\n\n\n0.4.6 - 2017-06-29\n\n\nChanged\n\n\n\n\nUpdated links in README\n\n\nAdded more information to package manifest\n\n\nMinor updates to README\n\n\n\n\n0.4.5 - 2017-06-27\n\n\nChanged\n\n\n\n\nUpdated badge link location in README\n\n\n\n\n0.4.2 - 2017-06-27\n\n\nChanged\n\n\n\n\nUpdated badge links to use proper extension id\n\n\n\n\n0.4.0 - 2017-06-27\n\n\nAdded\n\n\n\n\nA functional Language Server for the Puppet language\n\n\nReal time puppet lint\n\n\nAuto-complete and Hover support for many puppet language facets\n\n\nAuto-complete and Hover support for facts\n\n\n'puppet resource' support\n\n\nPreview node graph support\n\n\nExtension can load a local Language Server if Puppet Agent is present on Windows, Mac and Linux\n\n\nTested on older Puppet versions (4.7 LTS series)\n\n\nAdded testing on Travis and Appveyor\n\n\n\n\nFixed\n\n\n\n\nCompletion and Hover provider didn't load puppet modules\n\n\nImplemented textDocument/didClose notification\n\n\nExtension building is functional and automated in a gulpfile\n\n\nFixed completion at file beginning on new lines and on keywords\n\n\n\n\n0.0.3 - 2017-05-08\n\n\nAdded\n\n\n\n\nPuppet Parser validate linter added\n\n\n\n\n0.0.2 - 2017-05-04\n\n\nAdded\n\n\n\n\nPuppet Resource and Puppet Module commands.\n\n\n\n\n0.0.1 - 2017-04-10\n\n\nAdded\n\n\n\n\nInitial release of the puppet extension.",
+            "title": "Change Log"
+        },
+        {
+            "location": "/about/Change_Log/#unreleased",
+            "text": "",
+            "title": "Unreleased"
+        },
+        {
+            "location": "/about/Change_Log/#072-2017-11-01",
+            "text": "(GH-165) Broken readme link  (GH-88)  Rework Node Graph Preview to use local svg  (GH-154) Use hosted JSON schema files  (GH-169) Fix bug in sytanx highlighting  (GH-167) Add PDK New Task command  (GH-156) Document restarting Puppet extension command  (GH-177) Remove detection of Puppet VERSION file  (GH-175) Fix 'could not find valid version of Puppet'",
+            "title": "0.7.2 - 2017-11-01"
+        },
+        {
+            "location": "/about/Change_Log/#071-2017-09-29",
+            "text": "(GH-157) Puppet Resource command hidden",
+            "title": "0.7.1 - 2017-09-29"
+        },
+        {
+            "location": "/about/Change_Log/#070-2017-09-22",
+            "text": "(GH-115) Add Puppet Development Kit (PDK) integration  (GH-136) Create a better UI experience while Puppet loads  (GH-61)  Create a better experience when language client fails  (GH-135) Fix incorrect logger when a client error occurs  (GH-129) Honor inline puppet lint directives  (GH-133) Fix issue with puppet 5.1.0  (GH-122) Show upgrade message with changelog  (GH-120) Allow custom Puppet agent installation directory  (GH-126) Fix completion provider with Puppet 5.2.0  (GH-110) Add extension analytics  (GH-138) Set extension analytics to prod  (GH-109) Randomize languageserver port  (GH-111) Parse puppet-lint.rc in module directory",
+            "title": "0.7.0 - 2017-09-22"
+        },
+        {
+            "location": "/about/Change_Log/#060-2017-08-08",
+            "text": "Fix packaging error where language server was not included",
+            "title": "0.6.0 - 2017-08-08"
+        },
+        {
+            "location": "/about/Change_Log/#053-2017-08-08",
+            "text": "(GH-92) Added context menus for Puppet Resource and Nodegraph preview  (GH-98) Improve language server function and type loading  (GH-52) JSON validation and schema for metadata.json  (GH-47) Fixes pending language server tests  (GH-45) Fix runocop violations for language tcp server  (GH-89) Document support for linux in readme  (GH-64) Additional language server tests  (GH-103) Extension now supports puppet-lint rc files  (GH-99) Improved client README and Gallery page",
+            "title": "0.5.3 - 2017-08-08"
+        },
+        {
+            "location": "/about/Change_Log/#046-2017-06-29",
+            "text": "",
+            "title": "0.4.6 - 2017-06-29"
+        },
+        {
+            "location": "/about/Change_Log/#changed",
+            "text": "Updated links in README  Added more information to package manifest  Minor updates to README",
+            "title": "Changed"
+        },
+        {
+            "location": "/about/Change_Log/#045-2017-06-27",
+            "text": "",
+            "title": "0.4.5 - 2017-06-27"
+        },
+        {
+            "location": "/about/Change_Log/#changed_1",
+            "text": "Updated badge link location in README",
+            "title": "Changed"
+        },
+        {
+            "location": "/about/Change_Log/#042-2017-06-27",
+            "text": "",
+            "title": "0.4.2 - 2017-06-27"
+        },
+        {
+            "location": "/about/Change_Log/#changed_2",
+            "text": "Updated badge links to use proper extension id",
+            "title": "Changed"
+        },
+        {
+            "location": "/about/Change_Log/#040-2017-06-27",
+            "text": "",
+            "title": "0.4.0 - 2017-06-27"
+        },
+        {
+            "location": "/about/Change_Log/#added",
+            "text": "A functional Language Server for the Puppet language  Real time puppet lint  Auto-complete and Hover support for many puppet language facets  Auto-complete and Hover support for facts  'puppet resource' support  Preview node graph support  Extension can load a local Language Server if Puppet Agent is present on Windows, Mac and Linux  Tested on older Puppet versions (4.7 LTS series)  Added testing on Travis and Appveyor",
+            "title": "Added"
+        },
+        {
+            "location": "/about/Change_Log/#fixed",
+            "text": "Completion and Hover provider didn't load puppet modules  Implemented textDocument/didClose notification  Extension building is functional and automated in a gulpfile  Fixed completion at file beginning on new lines and on keywords",
+            "title": "Fixed"
+        },
+        {
+            "location": "/about/Change_Log/#003-2017-05-08",
+            "text": "",
+            "title": "0.0.3 - 2017-05-08"
+        },
+        {
+            "location": "/about/Change_Log/#added_1",
+            "text": "Puppet Parser validate linter added",
+            "title": "Added"
+        },
+        {
+            "location": "/about/Change_Log/#002-2017-05-04",
+            "text": "",
+            "title": "0.0.2 - 2017-05-04"
+        },
+        {
+            "location": "/about/Change_Log/#added_2",
+            "text": "Puppet Resource and Puppet Module commands.",
+            "title": "Added"
+        },
+        {
+            "location": "/about/Change_Log/#001-2017-04-10",
+            "text": "",
+            "title": "0.0.1 - 2017-04-10"
+        },
+        {
+            "location": "/about/Change_Log/#added_3",
+            "text": "Initial release of the puppet extension.",
+            "title": "Added"
+        },
+        {
             "location": "/about/Code_of_Conduct/",
             "text": "Contributor Covenant Code of Conduct\n\n\nOur Pledge\n\n\nIn the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.\n\n\nOur Standards\n\n\nExamples of behavior that contributes to creating a positive environment include:\n\n\n\n\nUsing welcoming and inclusive language\n\n\nBeing respectful of differing viewpoints and experiences\n\n\nGracefully accepting constructive criticism\n\n\nFocusing on what is best for the community\n\n\nShowing empathy towards other community members\n\n\n\n\nExamples of unacceptable behavior by participants include:\n\n\n\n\nThe use of sexualized language or imagery and unwelcome sexual attention or advances\n\n\nTrolling, insulting/derogatory comments, and personal or political attacks\n\n\nPublic or private harassment\n\n\nPublishing others' private information, such as a physical or electronic address, without explicit permission\n\n\nOther conduct which could reasonably be considered inappropriate in a professional setting\n\n\n\n\nOur Responsibilities\n\n\nProject maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.\n\n\nProject maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.\n\n\nScope\n\n\nThis Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.\n\n\nEnforcement\n\n\nInstances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at james.pogran@puppet.com. The project team will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.\n\n\nProject maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.\n\n\nAttribution\n\n\nThis Code of Conduct is adapted from the \nContributor Covenant\n, version 1.4, available at \nhttp://contributor-covenant.org/version/1/4",
             "title": "Contributor Covenant Code of Conduct"
@@ -83,7 +193,7 @@
         {
             "location": "/about/readmes/Client/",
             "text": "Puppet Language Support for Visual Studio Code\n\n\nThis extension provides full Puppet Language support for \nVisual Studio Code\n.\n\n\nIt is currently in technical preview, so that we can gather bug reports and find out what new features to add.\n\n\nRequirements\n\n\nYou will need to have Puppet Agent installed in order to fully use this extension. You can find instructions and installation links here:\n\n\n\n\nWindows\n\n\nMacOSX\n\n\nLinux\n\n\n\n\nQuick start\n\n\nCreate or open any Puppet manifest with the extension \n.pp\n or \n.epp\n and the extension will load automatically. Once loaded the extension will be available for the duration of the session.\n\n\n\n\nPlatform support\n\n\n\n\nMicrosoft Windows\n\n\nMacOSX\n\n\nLinux\n\n\n\n\nFeatures\n\n\n\n\nSyntax highlighting\n\n\nCode snippets\n\n\nLinting\n\n\nIntelliSense for resources, parameters and more\n\n\nValidation of \nmetadata.json\n files\n\n\nImport from \npuppet resource\n directly into manifests\n\n\nNode graph preview\n\n\nPuppet Development Kit integration\n\n\n(Experimental) Local debugging of Puppet manifests\n\n\n\n\nFeature information\n\n\nHover Support\n\n\nHovering over any resource, class declaration or other Puppet symbol provides instant contextual information. For example, hovering over the resource declaration lists the type name and parameter list, with all relevant help text.\n\n\nSyntax Highlighting\n\n\nSyntax highlighting recognizes all versions of Puppet and displays as you type.\n\n\n\n\nPuppet DSL\n\n\nPuppet Grammar\n\n\nModule metadata files\n\n\n\n\nCode Snippets\n\n\nAs part of IntelliSense and Snippets, you can quickly create templates to automate repetitive series of code.\n\n\nLinting\n\n\nLinting is automatically applied to the document as you edit, without having to save the file first. The validation uses \npuppet-lint\n to validate the Puppet syntax in all open puppet files. Errors and warnings appear in the Problems window in VSCode.\n\n\nPuppet Resource\n\n\nYou can import existing resources directly using \npuppet resource\n\n\n\n\n\n\nOpen the command palette (\nCtrl+Shift+P\n) or right click on a puppet file and select the menu entry\n\n\n\n\n\n\nType \npuppet resource\n and press enter\n\n\n\n\n\n\nEnter the resource type you want to import, for example \nuser\n\n\n\n\n\n\nThe information returned will be pasted into the open editor window where your cursor is resting, or at the begining of an empty file.\n\n\nNode Graph preview\n\n\nYou can preview the \nnode graph\n of a manifest while you edit your Puppet Code.\n\n\n\n\n\n\nOpen the command palette (\nCtrl+Shift+P\n) or right click on a puppet file and select the menu entry\n\n\n\n\n\n\nType \npuppet open node\n.. and press enter\n\n\n\n\n\n\nThe node graph will appear next to the manifest\n\n\nPuppet Development Kit\n\n\nYou can use the \nPuppet Development Kit\n inside VS Code from the command palette.\n\n\n** Note: The PDK must be installed prior to using these commands\n\n\nThe following commands are supported:\n\n\n\n\npdk new module\n\n\npdk new class\n\n\npdk validate\n\n\npdk test unit\n\n\n\n\nTo use any of the above commands, open the command palette and start typing a command. You can also use the right-click context menu or the editor menu to reach these commands.\n\n\nPDK New Module\n is available even if the extension isn't loaded, the rest of the commands are only available when the extension is loaded.\n\n\nLocally debugging Puppet manifests\n\n\nNote - This is an experimental feature\n\n\nThe Puppet extension is able to debug the compilation of a Puppet manifest, much like a Go, PowerShell, C# etc.  The debugger supports:\n\n\n\n\nLine breakpoints but not conditions on those breakpoints\n\n\nFunction breakpoints\n\n\nException breakpoints\n\n\nCall stack\n\n\nVariables, but only at the top stack frame\n\n\nLimited interactive debug console.  For example, you can assign a variable a value, but just as in regular Puppet you can't change its value later\n\n\nStep In, Out, Over\n\n\n\n\nYou may be presented with a Launch Configuration on first use.  Please see the \nVSCode Debugging link\n for instructions on how to set this up.\n\n\nSettings:\n\n\nmanifest\n - The manifest to apply.  By default this is the currently open file in the editor\n\n\nnoop\n - Whether the \npuppet apply\n sets No Operation (Noop) mode.  By default, this is set to false.  This means when runing the debugger it can make changes to your system\n\n\nargs\n - Additional arguements to pass to \npuppet apply\n, for example \n['--debug']\n will output debug information\n\n\n\n\nInstalling the Extension\n\n\nYou can install the official release of the Puppet extension by following the steps\nin the \nVisual Studio Code documentation\n.\nIn the Extensions pane, search for \"jpogran-puppet\" extension and install it there.  You will\nget notified automatically about any future extension updates!\n\n\nExperience a Problem?\n\n\nIf you haven't see the Problems Pane update in awhile, or hover and intellisense doesn't seem to showing up, and you might not know what to do. Sometimes the Puppet extension can experience problems which cause the language server to crash or not respond. The extension has a way of logging the crash, but there is something you can do to get right back to working: reload the Puppet Language Server.\n\n\nYou can reload the Puppet Lanuguage Server by opening the command palette and starting to type \nPuppet\n. A list of Puppet commands will appear, select \nPuppet: Restart Current Session\n. This will restart the Puppet Language Server without reloading VSCode or losing any work currently open in the editor.\n\n\n\n\nReporting Problems\n\n\nIf you're having trouble with the Puppet extension, please follow these instructions\nto file an issue on our GitHub repository:\n\n\n1. File an issue on our \nIssues Page\n\n\nMake sure to fill in the information that is requested in the issue template as it\nwill help us investigate the problem more quickly.\n\n\n2. Capture verbose logs and send them to us\n\n\nIf you're having an issue with crashing or other erratic behavior, add the following\nline to your User Settings in Visual Studio Code:\n\n\n    \"puppet.languageserver.debugFilePath\": \"C:\\\\Some\\\\file\\\\path.txt\"\n\n\n\n\nRestart Visual Studio Code and try to reproduce the problem, then examine the log. If the issue persists please open an issue.\n\n\nMaintainers\n\n\n\n\nJames Pogran\n - \n@ender2025\n\n\nGlenn Sarti\n - \n@glennsarti\n\n\nAustin Blatt\n\n\n\n\nTelemetry\n\n\nThis extension collects telemetry data to help us build a better experience for writing manifest and modules with Puppet and VS Code. We only collect data on which commands are executed. We do not collect any information about files, paths, etc. The extension respects the \ntelemetry.enableTelemetry\n setting which you can learn more about in our \nFAQ\n.\n\n\nLicense\n\n\nThis extension is \nlicensed under the Apache-2.0 License\n.",
-            "title": "Client"
+            "title": "Puppet Language Support for Visual Studio Code"
         },
         {
             "location": "/about/readmes/Client/#puppet-language-support-for-visual-studio-code",
