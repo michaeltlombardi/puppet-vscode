@@ -1,0 +1,11 @@
+{
+  "title": "Puppet VSCode Extension",
+  "plugins": ["theme-gestalt"],
+  "pluginsConfig": {
+    "theme-gestalt": {
+        "logo": "/img/logo.png",
+        "favicon": "/img/favicon.png",
+        "doNotHideChildrenChapters" : true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+docs/about
+docs/img/logo.png
+site
+node_modules
+docs/_book
+docs/node_modules
+package-lock.json
