@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Puppet Language Server - Puppet VSCode Extension</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Puppet Language Server", url: "#puppet-language-server", children: [
+              {title: "Description", url: "#description" },
+              {title: "Source Layout", url: "#source-layout" },
+              {title: "Architecture", url: "#architecture" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script> 
+</head>
+
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+
+
+
+<div class="container-fluid wm-page-content">
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../narrative/quickstart/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../narrative/quickstart/" class="btn btn-xs btn-link">
+        Quickstart
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../about/readmes/Language_Server/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../about/readmes/Language_Server/" class="btn btn-xs btn-link">
+        Puppet Language Server
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="puppet-language-server">Puppet Language Server</h1>
+<h2 id="description">Description</h2>
+<p>The Puppet Language Server is an out-of-process server which a language server client can conect to and then issue requests for long running tasks.  For example, parsing files for validity or installing a module.</p>
+<p>The language server complies with version 3.0 of the <a href="https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md">Language Server Protocol</a> although not all capabilities are implemented.  For example the <code>documentSymbol</code> provider is not available to the client.</p>
+<p>The architecture of the puppet language server is that:</p>
+<ul>
+<li>
+<p>The language server is written in Ruby which means it has access to a pretty much every thing Puppet Agent does; facts, parser, lexer, compiler etc..  This means the language server is extremely powerful</p>
+</li>
+<li>
+<p>It <em>only</em> requires the ruby environment from the Puppet Agent to be able to run.  This means gems with Native Extensions can not be used, and that any gems not explicitly supplied by Puppet Agent must be vendored inside the langauge server.</p>
+</li>
+</ul>
+<p>Note - This requirement may disappear with the advent of a Puppet SDK, however at the time of writing that was not available.</p>
+<h2 id="source-layout">Source Layout</h2>
+<p>The source code for the language server is laid out as follows:</p>
+<pre><code>+- lib
+|    +- languageserver
+|    |    +- Files in this directory are for creating the various
+|    |       generic messages as part of the language server protocol
+|    |
+|    +- puppet-languageserver
+|         +- Files in this directory are for the implementing the
+|            actual puppet language server
+|
++- puppet-languageserver - This file is the main entrypoint to run the server
+</code></pre>
+
+<p>The server README contains information on how to run the server</p>
+<h2 id="architecture">Architecture</h2>
+<p>The language server is built up in layers, similar to the OSI model in networking; where each layer builds up on top the next.</p>
+<pre><code>+-----------------------------+
+|                             |
+|  Puppet / Facter / Hiera    |
+|                             |
++-----------------------------+
+|                             |
+|  Puppet Helpers             |
+|                             |
++-----------------------------+
+|                             |
+|  Providers                  |
+|                             |
++-----------------------------+
+|                             |
+|  Message Router             |
+|                             |
++-----------------------------+
+|                             |
+|  JSON RPC Handler           |
+|                             |
++-----------------------------+
+|                             |
+|  Generic client connection  |
+|                             |
++-----------------------------+
+|                             |
+|  TCP Server                 |
+|                             |
++-----------------------------+
+</code></pre>
+
+<h3 id="tcp-server">TCP Server</h3>
+<p>The TCP server (<code>simple_tcp_server.rb</code>) is responsible for listening on a TCP port and then transferring raw data to/from client socket to the <code>Generic client connection</code> layer</p>
+<h3 id="generic-client-connection">Generic client connection</h3>
+<p>The client connection (<code>simple_tcp_server.rb</code>) exposes very simple methods to receive data from a client, send data to a client and close a connection to a client.</p>
+<h3 id="json-rpc-handler">JSON RPC Handler</h3>
+<p>The JSON RPC Handler (<code>json_rpc_handler.rb</code>) receives the raw bytes from the connection and extracts the <a href="http://www.jsonrpc.org/specification">JSON RPC</a> headers and message and passes it to the <code>Message Router</code> layer.  Conversely, the handler will take response from the <code>Message Router</code> and wrap them in the required JSON RPC headers prior to transmission.</p>
+<h3 id="message-router">Message Router</h3>
+<p>The message router (<code>message_router.rb</code>) receives requests and notifications, as defined by the <a href="https://github.com/Microsoft/language-server-protocol/blob/master/protocol.md#base-protocol-json-structures">language server protocol</a> and then either deals with the messages directly or calls on a <code>Provider</code> to calculate the correct response.</p>
+<p>The <code>Message Router</code> also holds a virtual document store, which contains an in-memory copy of the documents being edited on the language client.</p>
+<h3 id="providers">Providers</h3>
+<p>The provider classes (<code>completion_provider.rb</code>, <code>document_validator.rb</code>, <code>hover_provider.rb</code>) implement the various puppet languages services.  Typically they mirror the language service services, e.g. the <code>textDocument/hover</code> request is serviced by the hover provider.</p>
+<h3 id="puppet-helpers">Puppet Helpers</h3>
+<p>Many of the providers use common code.  The Puppet Helpers (<code>facter_helper.rb</code>, <code>puppet_helper.rb</code>, <code>puppet_parser_helper.rb</code>) abstract away common tasks which make the providers smaller and easier to edit.  The helpers also provider a caching layer so that
+Puppet and Facter do not need to be evaluated as often, for example getting all of the facter facts.</p>
+<h3 id="puppet-facter-hiera">Puppet / Facter / Hiera</h3>
+<p>At this layer any calls are using Puppet directly, for example; Calling facter or executing a catalog compilation.</p>
+
+  <br>
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../../narrative/quickstart/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../../narrative/quickstart/" class="btn btn-xs btn-link">
+        Quickstart
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../../about/readmes/Language_Server/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../../about/readmes/Language_Server/" class="btn btn-xs btn-link">
+        Puppet Language Server
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="col-md-12 wm-page-content">
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+
+</body>
+</html>
