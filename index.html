@@ -34,10 +34,13 @@
       var is_top_frame = (window === window.parent);
         
         var pageToc = [
-          {title: "Home", url: "#home", children: [
-              {title: "Getting Started", url: "#getting-started" },
-              {title: "Resources", url: "#resources" },
-              {title: "Feedback &amp; Help", url: "#feedback-help" },
+          {title: "Features", url: "#features", children: [
+          ]},
+          {title: "Getting Started", url: "#getting-started", children: [
+          ]},
+          {title: "Resources", url: "#resources", children: [
+          ]},
+          {title: "Feedback &amp; Help", url: "#feedback-help", children: [
           ]},
         ];
 
@@ -123,6 +126,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
       <li class="wm-toc-li wm-toc-lev2 "><a href="about/License/" class="wm-article-link wm-toc-text">License</a>
 </li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="about/README/" class="wm-article-link wm-toc-text">README</a>
+</li>
       <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Readmes</span>
 </li>
 <li class="wm-toc-li-nested collapse">
@@ -130,6 +135,8 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
       <li class="wm-toc-li wm-toc-lev3 "><a href="about/readmes/Client/" class="wm-article-link wm-toc-text">Client</a>
 </li>
       <li class="wm-toc-li wm-toc-lev3 "><a href="about/readmes/Language_Server/" class="wm-article-link wm-toc-text">Language Server</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev3 "><a href="about/readmes/README/" class="wm-article-link wm-toc-text">README</a>
 </li>
   </ul>
 </li>
@@ -191,17 +198,38 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1 id="home">Home</h1>
-<p><em>Placeholder text</em></p>
+    <h2 id="features">Features</h2>
+<p>This project is a visual studio code extension which provides Puppet Language support, including the following features:</p>
+<ul>
+<li>Syntax Highlighting</li>
+<li>Real-time linting</li>
+<li>PDK commands</li>
+<li>Auto-complete for facts and most (?) Puppet language facets</li>
+<li>Preview node graphs</li>
+<li>More!</li>
+</ul>
 <h2 id="getting-started">Getting Started</h2>
-<p><em>Five minute guide to getting running with the client without stepping in a bear trap</em></p>
+<p>Assuming you already have <a href="">Visual Studio Code</a> installed and open, you'll need to open the extensions menu by doing one of the following:</p>
+<ul>
+<li>Using a hotkey - <code>⇧⌘X</code> (MacOS) or <code>ctrl+shift+x</code> (Windows, Linux).</li>
+<li>Clicking the extension icon on the activity bar</li>
+<li>Navigating to <code>View -&gt; Extensions</code> in the menu at the top of the program.</li>
+</ul>
+<p>Once you have the extensions menu open, you can search for the extension in the search bar - searching on <code>puppet</code> should bring up the extension.
+Make sure you click the install button for the extension called <code>Puppet</code>, not one called <code>Puppet Support</code>.</p>
+<p>Once you install the extension, you'll have the option to reload the window - you can do so by clicking the button labeled <code>Reload</code> in the activity bar.</p>
+<p>You should now have the extension installed - to activate it, however, you need to open a Puppet file - any file ending in <code>.pp</code> or <code>.epp</code> should start the extension.</p>
+<p>For a more detailed walkthrough of using the features, check out our <a href="narrative/quickstart/">quickstart</a></p>
 <h2 id="resources">Resources</h2>
 <p><em>Include internal and external (where appropriate) resources</em></p>
 <ul>
-<li>Contributor Covenant</li>
-<li>Contributor's Guide</li>
+<li>Contributor's Covenant</li>
+<li>Contributing Checklist</li>
 <li>Client README</li>
 <li>Language Server README</li>
+<li>Puppet Language</li>
+<li>Puppet Development Kit</li>
+<li>?</li>
 </ul>
 <h2 id="feedback-help">Feedback &amp; Help</h2>
 <p><em>Useful information about how to get help as well as how to submit feedback</em></p>
@@ -234,5 +262,5 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </html>
 <!--
 MkDocs version : 0.17.1
-Build Date UTC : 2017-11-10 18:47:40
+Build Date UTC : 2017-11-11 00:01:07
 -->
