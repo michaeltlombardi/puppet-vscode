@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Features\n\n\nThis project is a visual studio code extension which provides Puppet Language support, including the following features:\n\n\n\n\nSyntax Highlighting\n\n\nReal-time linting\n\n\nPDK commands\n\n\nAuto-complete for facts and most (?) Puppet language facets\n\n\nPreview node graphs\n\n\nMore!\n\n\n\n\nGetting Started\n\n\nAssuming you already have \nVisual Studio Code\n installed and open, you'll need to open the extensions menu by doing one of the following:\n\n\n\n\nUsing a hotkey - \n\u21e7\u2318X\n (MacOS) or \nctrl+shift+x\n (Windows, Linux).\n\n\nClicking the extension icon on the activity bar\n\n\nNavigating to \nView -> Extensions\n in the menu at the top of the program.\n\n\n\n\nOnce you have the extensions menu open, you can search for the extension in the search bar - searching on \npuppet\n should bring up the extension.\nMake sure you click the install button for the extension called \nPuppet\n, not one called \nPuppet Support\n.\n\n\nOnce you install the extension, you'll have the option to reload the window - you can do so by clicking the button labeled \nReload\n in the activity bar.\n\n\nYou should now have the extension installed - to activate it, however, you need to open a Puppet file - any file ending in \n.pp\n or \n.epp\n should start the extension.\n\n\nFor a more detailed walkthrough of using the features, check out our \nquickstart\n\n\nResources\n\n\nInclude internal and external (where appropriate) resources\n\n\n\n\nContributor's Covenant\n\n\nContributing Checklist\n\n\nClient README\n\n\nLanguage Server README\n\n\nPuppet Language\n\n\nPuppet Development Kit\n\n\n?\n\n\n\n\nFeedback & Help\n\n\nUseful information about how to get help as well as how to submit feedback",
+            "text": "Features\n\n\nThis project is a visual studio code extension which provides Puppet Language support, including the following features:\n\n\n\n\nSyntax Highlighting\n\n\nReal-time linting\n\n\nPDK commands\n\n\nAuto-complete for facts and most (?) Puppet language facets\n\n\nPreview node graphs\n\n\nMore!\n\n\n\n\nGetting Started\n\n\nAssuming you already have \nVisual Studio Code\n installed and open, you'll need to open the extensions menu by doing one of the following:\n\n\n\n\nUsing a hotkey - \n\u21e7\u2318X\n (MacOS) or \nctrl+shift+x\n (Windows, Linux).\n\n\nClicking the extension icon on the activity bar\n\n\nNavigating to \nView -> Extensions\n in the menu at the top of the program.\n\n\n\n\nOnce you have the extensions menu open, you can search for the extension in the search bar - searching on \npuppet\n should bring up the extension.\nMake sure you click the install button for the extension called \nPuppet\n, not one called \nPuppet Support\n.\n\n\nOnce you install the extension, you'll have the option to reload the window - you can do so by clicking the button labeled \nReload\n in the activity bar.\n\n\nYou should now have the extension installed - to activate it, however, you need to open a Puppet file - any file ending in \n.pp\n or \n.epp\n should start the extension.\n\n\nFor a more detailed walkthrough of using the features, check out our \nquickstart\n\n\nResources\n\n\nInclude internal and external (where appropriate) resources\n\n\n\n\nContributor's Covenant\n\n\nContributing Checklist\n\n\nClient README\n\n\nLanguage Server README\n\n\nPuppet Language\n\n\nPuppet Development Kit\n\n\n?\n\n\n\n\nFeedback and Help\n\n\nUseful information about how to get help as well as how to submit feedback",
             "title": "Home"
         },
         {
@@ -21,9 +21,9 @@
             "title": "Resources"
         },
         {
-            "location": "/#feedback-help",
+            "location": "/#feedback-and-help",
             "text": "Useful information about how to get help as well as how to submit feedback",
-            "title": "Feedback &amp; Help"
+            "title": "Feedback and Help"
         },
         {
             "location": "/about/Change_Log/",
